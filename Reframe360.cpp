@@ -929,7 +929,7 @@ void Reframe360Factory::describeInContext(OFX::ImageEffectDescriptor& p_Desc, OF
     animGroup->setLabels("Camera Animation Parameters", "Camera Animation Parameters", "Camera Animation Parameters");
 
     IntParamDescriptor* intParam = defineIntParam(p_Desc, "cam1", "Camera Sequence", "Camera Sequence", animGroup, 1,
-                                                  20, 1);
+                                                  MAX_CAM_NUM, 1, 1, MAX_CAM_NUM);
     page->addChild(*intParam);
 
     std::string choices[] = {"Power", "Sine", "Exponential", "Circular"};
@@ -946,7 +946,7 @@ void Reframe360Factory::describeInContext(OFX::ImageEffectDescriptor& p_Desc, OF
                                          "Camera Selection Parameters");
 
     intParam = defineIntParam(p_Desc, "active_cam", "Edit Camera", "Edit Camera", cameraSelectionParamsGroup, 1,
-                              MAX_CAM_NUM, 1, 1, 20);
+                              MAX_CAM_NUM, 1, 1, MAX_CAM_NUM);
     page->addChild(*intParam);
 
     BooleanParamDescriptor* boolParam = defineBooleanParam(p_Desc, "show_active_cam", "Show Edit Camera",
