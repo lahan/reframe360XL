@@ -3,7 +3,7 @@
 #include "ofxsMultiThread.h"
 #include "ofxsProcessing.h"
 
-#define kPluginName "Reframe360 XL"
+#define kPluginName "Reframe360 XL Lahan"
 #define kPluginGrouping "Reframe360 XL"
 #define kPluginDescription "Lets you animate a virtual camera in your 360 footage."
 #define kPluginIdentifier "net.lerondpoint.Reframe360XLPlugin"
